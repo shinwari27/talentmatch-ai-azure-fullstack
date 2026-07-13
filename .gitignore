@@ -1,0 +1,26 @@
+# Dependencies
+**/node_modules
+
+# Environment files — NEVER commit real secrets
+**/.env
+**/.env.local
+!**/.env.example
+
+# Build output
+**/dist
+**/build
+
+# Azure Functions local settings (has real secrets too)
+**/local.settings.json
+
+# Logs
+**/*.log
+npm-debug.log*
+
+# OS/editor files
+.DS_Store
+**/.vscode/*
+!**/.vscode/extensions.json
+
+# Test artifacts
+**/coverage

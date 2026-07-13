@@ -1,0 +1,42 @@
+name: Deploy Frontend
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "talentmatch-ai-frontend/**"
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: talentmatch-ai-frontend
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Build production bundle
+        run: npm run build
+        # Produces the dist/ folder — this is what actually gets deployed,
+        # not the raw source, since Vite compiles everything down to
+        # static HTML/JS/CSS.
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: app-talentmatch-web-11052
+          publish-profile: ${{ secrets.AZURE_FRONTEND_PUBLISH_PROFILE }}
+          package: talentmatch-ai-frontend/dist

@@ -1,0 +1,40 @@
+name: Deploy Backend
+
+# Only runs when something inside talentmatch-ai-backend actually changes —
+# a frontend-only commit won't trigger a pointless backend redeploy.
+on:
+  push:
+    branches: [main]
+    paths:
+      - "talentmatch-ai-backend/**"
+
+jobs:
+  test-and-deploy:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: talentmatch-ai-backend
+
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+        # If any Phase 16 test fails, the workflow stops here — a broken
+        # build never reaches the deploy step at all.
+
+      - name: Deploy to Azure App Service
+        uses: azure/webapps-deploy@v3
+        with:
+          app-name: app-talentmatch-api-11052
+          publish-profile: ${{ secrets.AZURE_BACKEND_PUBLISH_PROFILE }}
+          package: talentmatch-ai-backend
