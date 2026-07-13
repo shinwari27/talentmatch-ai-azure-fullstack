@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/00aa6e12-605a-4aad-9ece-9d1b54103779/resourceGroups/rg-talentmatch-ai/providers/Microsoft.Web/sites/app-talentmatch-api-11052",
+    "appService.deploySubpath": "."
+}
