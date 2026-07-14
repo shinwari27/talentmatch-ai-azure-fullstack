@@ -23,8 +23,8 @@ const steps = [
 ];
 
 const stats = [
-  { value: '4,200+', label: 'Candidates screened' },
-  { value: '640+', label: 'Jobs matched' },
+  { value: '200+', label: 'Candidates screened' },
+  { value: '64+', label: 'Jobs matched' },
   { value: '68%', label: 'Faster time-to-shortlist' },
   { value: '99.9%', label: 'Platform uptime' },
 ];
