@@ -30,9 +30,12 @@ jobs:
 
       - name: Build production bundle
         run: npm run build
-        # Produces the dist/ folder — this is what actually gets deployed,
-        # not the raw source, since Vite compiles everything down to
-        # static HTML/JS/CSS.
+        env:
+          # Vite bakes environment variables into the build at this exact
+          # moment — without this, the deployed frontend would silently
+          # fall back to localhost:5000, which means nothing but your own
+          # laptop would ever be able to reach the API.
+          VITE_API_URL: https://app-talentmatch-api-11052.azurewebsites.net/api
 
       - name: Deploy to Azure App Service
         uses: azure/webapps-deploy@v3

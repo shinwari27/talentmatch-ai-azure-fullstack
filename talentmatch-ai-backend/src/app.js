@@ -20,7 +20,10 @@ const app = express();
 app.use(helmet());
 app.use(
   cors({
-    origin: process.env.FRONTEND_URL || "http://localhost:5173",
+    // Supports multiple comma-separated origins (e.g. local dev + the
+    // deployed frontend), since both need to reach this same backend —
+    // a single hardcoded origin would break one or the other.
+    origin: (process.env.FRONTEND_URL || "http://localhost:5173").split(",").map((o) => o.trim()),
     credentials: true,
   })
 );

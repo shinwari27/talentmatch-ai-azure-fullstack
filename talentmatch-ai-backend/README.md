@@ -188,5 +188,3 @@ against a live Azure SQL database from my sandbox — no outbound network
 access. So this has **not** been executed end-to-end by me. Run through the
 curl commands above yourself and tell me exactly what breaks, if anything —
 that's the real test.
-
-Testing CI/CD pipeline
