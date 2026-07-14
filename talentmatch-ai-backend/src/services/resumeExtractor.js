@@ -34,7 +34,6 @@ const KNOWN_SKILLS = [
   // Cloud platforms
   "Azure", "AWS", "Google Cloud", "GCP", "Docker", "Kubernetes", "Terraform", "Bicep",
   "ARM Templates", "Azure CLI", "CI/CD", "Git", "GitHub", "GitHub Actions", "Jenkins", "DevOps",
-  "Azure Functions", "Azure Service Bus", "Azure Key Vault", "Azure Table Storage",
 
   // Azure-specific administration (previously missing — the gap that caused this)
   "Entra ID", "Azure AD", "Azure Active Directory", "Azure Monitor", "Azure Backup",
