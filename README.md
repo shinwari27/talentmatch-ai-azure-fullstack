@@ -14,7 +14,7 @@ Candidates upload a resume; Azure AI Document Intelligence extracts their skills
 - [The Matching Engine](#the-matching-engine)
 - [The AI Resume Parsing Pipeline](#the-ai-resume-parsing-pipeline)
 - [Tech Stack](#tech-stack)
-- [System Architecture](#system-architecture)
+- [System Architecture](![TalentMatch AI Architecture Diagram](./Documentation/images/architecture-diagram.png))
 - [Database Design](#database-design)
 - [Security Implementation](#security-implementation)
 - [Automation & Background Processing](#automation--background-processing)
