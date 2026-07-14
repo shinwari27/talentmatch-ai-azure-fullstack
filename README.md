@@ -127,7 +127,7 @@ Resume text is extracted using Azure AI Document Intelligence's prebuilt-read mo
 | Version Control | Git, GitHub |
 
 ---
-## 🏗️ System Architecture
+## 🏗️ Architecture Diagram
 
 <p align="center">
   <img src="Documentation/architecture-diagram.png"
