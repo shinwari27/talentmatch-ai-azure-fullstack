@@ -4,16 +4,6 @@
 
 Candidates upload a resume; Azure AI Document Intelligence extracts their skills, education, experience, certifications, and projects. Recruiters post jobs with real, structured requirements. A custom matching engine scores every application across six weighted categories and shows exactly *why* a candidate got the score they did — not just a bare percentage.
 
-
-## 🏗️ System Architecture
-
-<p align="center">
-  <img src="Documentation/architecture-diagram.png"
-       alt="TalentMatch AI Architecture Diagram"
-       width="100%">
-</p>
-
----
 ---
 
 ## Table of Contents
@@ -135,6 +125,15 @@ Resume text is extracted using Azure AI Document Intelligence's prebuilt-read mo
 | CI/CD | GitHub Actions |
 | Hosting | Azure App Service |
 | Version Control | Git, GitHub |
+
+---
+## 🏗️ System Architecture
+
+<p align="center">
+  <img src="Documentation/architecture-diagram.png"
+       alt="TalentMatch AI Architecture Diagram"
+       width="100%">
+</p>
 
 ---
 
