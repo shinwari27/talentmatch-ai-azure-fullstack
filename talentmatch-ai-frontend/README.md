@@ -108,3 +108,5 @@ behind a hamburger menu below the `lg` breakpoint; grids and tables reflow at `s
 This completes **Phase 3 — Frontend Development**. Phase 4 begins Azure solution
 architecture and planning for the real backend, database, and AI services this frontend
 will eventually connect to.
+
+Deployed via GitHub Actions
